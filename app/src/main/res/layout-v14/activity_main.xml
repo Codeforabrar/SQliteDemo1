@@ -11,16 +11,16 @@
          android:id="@+id/textView1"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-android:text="Content provider"
-android:layout_alignParentTop="true"
-android:layout_centerHorizontal="true"
-android:textSize="30dp" />
+         android:text="Content provider"
+             android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:textSize="30dp" />
 
 <TextView
 android:id="@+id/textView2"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:text="Tutorials point "
+android:text="BRAC UNIVERSITY "
 android:textColor="#ff87ff09"
 android:textSize="30dp"
 android:layout_below="@+id/textView1"
@@ -84,9 +84,9 @@ android:layout_height="wrap_content"
 android:text="Retrive student"
 android:id="@+id/button"
 android:layout_below="@+id/button2"
-android:layout_alignRight="@+id/editText3"
-android:layout_alignEnd="@+id/editText3"
-android:layout_alignLeft="@+id/button2"
+    android:layout_alignLeft="@+id/button2"
 android:layout_alignStart="@+id/button2"
-android:onClick="onClickRetrieveStudents"/>
+android:onClick="onClickRetrieveStudents"
+    android:layout_alignRight="@+id/button2"
+    android:layout_alignEnd="@+id/button2" />
     </RelativeLayout>
