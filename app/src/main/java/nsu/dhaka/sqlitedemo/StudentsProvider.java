@@ -16,13 +16,11 @@ import android.text.TextUtils;
 import java.util.HashMap;
 
 public class StudentsProvider extends ContentProvider {
-    static final String PROVIDER_NAME = "com.example.provider.College";
-    static final String URL = "content://" + PROVIDER_NAME + "/students";
+    static final String AUTHORITY = "com.example.provider.College";
+    static final String URL = "content://" + AUTHORITY + "/students";
     static final Uri CONTENT_URI = Uri.parse(URL);
 
-    static final String _ID = "_id";
-    static final String NAME = "name";
-    static final String GRADE = "grade";
+
 
     private static HashMap<String, String> STUDENTS_PROJECTION_MAP;
 
@@ -32,8 +30,8 @@ public class StudentsProvider extends ContentProvider {
     static final UriMatcher uriMatcher;
     static{
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI(PROVIDER_NAME, "students", STUDENTS);
-        uriMatcher.addURI(PROVIDER_NAME, "students/#", STUDENT_ID);
+        uriMatcher.addURI(AUTHORITY, "students", STUDENTS);
+        uriMatcher.addURI(AUTHORITY, "students/#", STUDENT_ID);
     }
 
     /**
@@ -43,6 +41,9 @@ public class StudentsProvider extends ContentProvider {
     static final String DATABASE_NAME = "College";
     static final String STUDENTS_TABLE_NAME = "students";
     static final int DATABASE_VERSION = 1;
+    static final String _ID = "_id";
+    static final String NAME = "name";
+    static final String GRADE = "grade";
     static final String CREATE_DB_TABLE =
             " CREATE TABLE " + STUDENTS_TABLE_NAME +
                     " (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -200,5 +201,8 @@ public class StudentsProvider extends ContentProvider {
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
         }
+    }
+    public void abrar(){
+
     }
 }
